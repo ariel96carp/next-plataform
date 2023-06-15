@@ -1,3 +1,43 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "next",
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          [ "@", "./" ]
+        ]
+      }
+    }
+  },
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-filename-extension": [
+        2, { "extensions": [".js"] }
+    ],
+    "react/jsx-indent": [ 1, 4 ],
+    "react/jsx-indent-props": [ 1, 4 ],
+    "react/function-component-definition": [ 1, {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "function-expression"
+    }],
+    "semi": [ 1, "never" ],
+    "linebreak-style": 0,
+    "comma-dangle": [ 1, "never" ],
+    "indent": [ 1, 4, { "SwitchCase": 1 } ],
+    "react/require-default-props": 0,
+    "array-bracket-spacing": [ 0, "always"],
+    "no-plusplus": [ 1, { "allowForLoopAfterthoughts": true }],
+    "react/no-array-index-key": 0,
+    "no-param-reassign": [ "error", { "props": false } ],
+    "react/jsx-props-no-spreading": [ "error" ],
+    "camelcase": [ 1, { "ignoreDestructuring": true, "ignoreImports": true } ],
+    "import/no-extraneous-dependencies": [ 1, { "devDependencies": true } ],
+    "no-multi-str": 0,
+    "no-unused-vars": [ 1, { "args": "after-used" } ]
+  }
 }
