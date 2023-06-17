@@ -9,6 +9,8 @@ const ProjectCard = async ({ imageSrc, title, description }) => (
             fill
             sizes="(max-width: 576px) 100vw, (max-width: 1024px) 50vw, 20vw"
             quality={100}
+            placeholder="blur"
+            blurDataURL={imageSrc}
             className="object-cover object-top"
         />
         <div className="project-card-mask">

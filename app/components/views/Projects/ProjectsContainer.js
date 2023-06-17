@@ -3,8 +3,9 @@ import Projects from './Projects'
 import SkeletonLoading from '../../common/SkeletonLoading'
 
 const ProjectsContainer = async () => {
+    const REVALIDATE_TIME = 3600
     const response = await fetch('http://localhost:3000/api/projects', {
-        cache: 'no-store'
+        next: { revalidate: REVALIDATE_TIME }
     })
     const data = await response.json()
     return (

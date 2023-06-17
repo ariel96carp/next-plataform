@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { useRef, useEffect } from 'react'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '@/tailwind.config'
@@ -25,6 +26,7 @@ const Header = () => {
             link: '/contacto'
         }
     ]
+    const pathname = usePathname()
     const offCanvasRef = useRef(null)
     const toggleMenu = () => {
         const offCanvasMenu = offCanvasRef.current
@@ -100,7 +102,7 @@ const Header = () => {
                                             <li key={index}>
                                                 <Link
                                                     href={link}
-                                                    className="py-2 inline-block w-full"
+                                                    className={pathname === link ? 'py-2 inline-block w-full text-edsoft-blue' : 'py-2 inline-block w-full'}
                                                     onClick={toggleMenu}
                                                 >
                                                     {label}
@@ -120,7 +122,10 @@ const Header = () => {
                                     link
                                 }, index) => (
                                     <li key={index} className="hover:text-edsoft-blue">
-                                        <Link href={link}>
+                                        <Link
+                                            href={link}
+                                            className={pathname === link ? 'text-edsoft-blue' : undefined}
+                                        >
                                             {label}
                                         </Link>
                                     </li>
