@@ -3,8 +3,9 @@ import SkeletonLoading from '../../common/SkeletonLoading'
 import Projects from './Projects'
 
 const ProjectsContainer = async () => {
+    const { API_URL } = process.env
     const REVALIDATE_TIME = 3600
-    const response = await fetch('http://localhost:3000/api/projects', {
+    const response = await fetch(`${API_URL}/api/projects`, {
         next: { revalidate: REVALIDATE_TIME }
     })
     const data = await response.json()
