@@ -4,9 +4,10 @@ import SkeletonLoading from '../../common/SkeletonLoading'
 
 const ProjectsContainer = async () => {
     const { API_URL } = process.env
-    const REVALIDATE_TIME = 3600
+    // const REVALIDATE_TIME = 3600
     const response = await fetch(`${API_URL}/api/projects`, {
-        next: { revalidate: REVALIDATE_TIME }
+        // next: { revalidate: REVALIDATE_TIME }
+        cache: 'no-store'
     })
     const data = await response.json()
     return (
