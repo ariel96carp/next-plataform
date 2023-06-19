@@ -16,8 +16,6 @@ const AboutCard = ({
                 fill
                 sizes="(max-width: 576px) 100vw, 50vw"
                 quality={100}
-                placeholder="blur"
-                blurDataURL={imageSrc}
                 className="object-cover object-center"
                 priority
             />
