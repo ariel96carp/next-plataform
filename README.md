@@ -40,7 +40,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Overview 
 ![Overview](./public/images/localhost_3000_%20(1).png)
 ![Overview](./public/images/localhost_3000_%20(2).png)
+![Overview](./public/images/localhost_3000_(Samsung%20Galaxy%20S).png)
 ![Overview](./public/images/localhost_3000_%20(3).png)
 ![Overview](./public/images/localhost_3000_.png)
-![Overview](./public/images/localhost_3000_(Samsung%20Galaxy%20S).png)
 ![Overview](./public/images/localhost_3000_(Samsung%20Galaxy%20S1).png)
+
+## Deploy
+[https://next-plataform.vercel.app/](https://next-plataform.vercel.app/)

@@ -16,7 +16,7 @@ const openSans = Open_Sans({
     variable: '--font-open-sans'
 })
 
-const ProximaNova = localFont({
+const proximaNova = localFont({
     src: '../public/fonts/proxima-nova-bold.otf',
     weight: '700',
     style: 'normal',
@@ -24,7 +24,7 @@ const ProximaNova = localFont({
 })
 
 const RootLayout = ({ children }) => (
-    <html lang="en" className={`${openSans.variable} ${ProximaNova.variable}`}>
+    <html lang="en" className={`${openSans.variable} ${proximaNova.variable}`}>
         <body>
             <Header />
             <main>
